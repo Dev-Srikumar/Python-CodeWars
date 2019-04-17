@@ -1,5 +1,4 @@
 def tickets(people):
-    print(people)
     bills = {25:0 , 50:0, 100:0}
     for i in people:
         if i <=25:
@@ -15,8 +14,6 @@ def tickets(people):
             else:
                 bills[i-75] -= 3
         bool_dict=all(values >=0 for values in bills.values())
-        print(bills)
-        print(bool_dict)
         if bool_dict is False:
             return "NO"
     return "YES"
